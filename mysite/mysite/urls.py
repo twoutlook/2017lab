@@ -17,6 +17,12 @@ from django.conf.urls import url,include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^polls/', include('polls.urls')),
+    
+    # 將根目錄完全指向polls
+    # 就好像polls就是這網站
+    # url(r'^$', include('polls.urls')), 
+ 
+    
 ]
