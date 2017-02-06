@@ -61,7 +61,11 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = 'polls/detail.html'
+
+    # template_name = 'polls/detail.html'
+	# https://docs.djangoproject.com/en/1.10/intro/tutorial04/
+	# default one is no need to state, it's working!
+    # template_name = 'polls/question_detail.html'
 
 
 class ResultsView(generic.DetailView):
@@ -69,4 +73,3 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
-        
